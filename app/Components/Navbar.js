@@ -1,24 +1,111 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import logo from "@/public/Jobmantic.png";
+import { usePathname } from "next/navigation";
+import { FaSortDown, FaSortUp } from "react-icons/fa6";
 
 const Navbar = () => {
-  const navLinks = [
-    { name: "AI Resume", path: "/ai-resume" },
-    { name: "AI Coverletter", path: "/ai-coverletter" },
-    {
-      name: "Career",
-      path: "/career",
-      dropdown: [
-        { name: "Jobs", path: "/career/jobs" },
-        { name: "Internships", path: "/career/internships" },
-        { name: "Guides", path: "/career/guides" },
-      ],
-    },
-    { name: "Blog", path: "/blog" },
+  const pathname = usePathname();
+  const [careerOpen, setCareerOpen] = useState(false);
+
+  const careerDropdown = [
+    { name: "Jobs", path: "/career/jobs" },
+    { name: "Internships", path: "/career/internships" },
+    { name: "Guides", path: "/career/guides" },
   ];
+  const navOptions = (
+    <>
+      <Link
+        href="/ai-resume"
+        className={`px-2 py-1 ${
+          pathname === "/ai-resume"
+            ? "text-[#23A2FC]"
+            : "text-[#080808] hover:text-[#23A2FC]"
+        }`}
+      >
+        AI Resume
+      </Link>
+      <Link
+        href="/ai-coverletter"
+        className={`px-2 py-1 ${
+          pathname === "/ai-coverletter"
+            ? "text-[#23A2FC]"
+            : "text-[#080808] hover:text-[#23A2FC]"
+        }`}
+      >
+        AI Coverletter
+      </Link>
+      <Link
+        href="/pricing"
+        className={`px-2 py-1 ${
+          pathname === "/pricing"
+            ? "text-[#23A2FC]"
+            : "text-[#080808] hover:text-[#23A2FC]"
+        }`}
+      >
+        Pricing
+      </Link>
+
+      {/* Career dropdown */}
+      <div className="relative inline-block">
+        <button
+          onClick={() => setCareerOpen(!careerOpen)}
+          className={`px-2 py-1 flex items-center gap-1 ${
+            pathname.startsWith("/career")
+              ? "text-[#23A2FC] font-semibold"
+              : "text-[#080808] hover:text-[#23A2FC]"
+          }`}
+        >
+          Career
+          <span>{careerOpen ? <FaSortUp /> : <FaSortDown />}</span>
+        </button>
+
+        {careerOpen && (
+          <ul className="absolute top-full left-0 mt-1 w-40 bg-white shadow rounded-md">
+            {careerDropdown.map((item, index) => (
+              <li key={index}>
+                <Link
+                  href={item.path}
+                  className={`block px-3 py-2 ${
+                    pathname === item.path
+                      ? "text-[#23A2FC] font-semibold"
+                      : "text-[#080808] hover:text-[#23A2FC]"
+                  }`}
+                  onClick={() => setCareerOpen(false)} // close dropdown on click
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      <Link
+        href="/organization"
+        className={`px-2 py-1 ${
+          pathname === "/organization"
+            ? "text-[#23A2FC]"
+            : "text-[#080808] hover:text-[#23A2FC]"
+        }`}
+      >
+        Organization
+      </Link>
+      <Link
+        href="/blog"
+        className={`px-2 py-1 ${
+          pathname === "/blog"
+            ? "text-[#23A2FC]"
+            : "text-[#080808] hover:text-[#23A2FC]"
+        }`}
+      >
+        Blog
+      </Link>
+    </>
+  );
+
   return (
     <div className="navbar  my-4">
       <div className="navbar-start">
@@ -44,23 +131,7 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            {navOptions}
           </ul>
         </div>
         <Link href="/">
@@ -68,27 +139,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
-        </ul>
+        <ul className="menu menu-horizontal px-1">{navOptions}</ul>
       </div>
       <div className="navbar-end">
         <a className="btn">Button</a>
