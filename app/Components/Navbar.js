@@ -1,9 +1,24 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import logo from "@/public/Jobmantic.png";
 
 const Navbar = () => {
+  const navLinks = [
+    { name: "AI Resume", path: "/ai-resume" },
+    { name: "AI Coverletter", path: "/ai-coverletter" },
+    {
+      name: "Career",
+      path: "/career",
+      dropdown: [
+        { name: "Jobs", path: "/career/jobs" },
+        { name: "Internships", path: "/career/internships" },
+        { name: "Guides", path: "/career/guides" },
+      ],
+    },
+    { name: "Blog", path: "/blog" },
+  ];
   return (
     <div className="navbar  my-4">
       <div className="navbar-start">
