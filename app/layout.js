@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
+import Frame from "./Components/Frame";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           {children}
           <Hero></Hero>
+          <Frame></Frame>
         </div>
       </body>
     </html>

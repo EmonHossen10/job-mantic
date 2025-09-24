@@ -6,11 +6,14 @@ import frame from "@/public/frame.png";
 import img1 from "@/public/summary1.png";
 import img2 from "@/public/summary2.png";
 import img3 from "@/public/summary3.png";
+import heroBg from "@/public/gradient.png";
 
 const Hero = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-between items-center">
+      <div className="flex flex-col md:flex-row justify-between items-center max-h-screen pb-10  "
+      style={{ backgroundImage: `url(${heroBg.src})`,    }}
+      >
         {/* left */}
         <div className="space-y-2 px-4 md:px-0">
           <div className="flex justify-center md:justify-start">
@@ -42,6 +45,7 @@ const Hero = () => {
         </div>
 
         {/* right */}
+
         <div className="relative">
           <div>
             <Image src={frame} alt="Frame" />
