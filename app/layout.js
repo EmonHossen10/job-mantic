@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "./Components/Navbar";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -15,11 +16,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
-
-        <div>
+        <div className="max-w-6xl mx-auto px-4">
           {/* Navigation Bar */}
+          <Navbar />
+          {children}
         </div>
-        {children}
       </body>
     </html>
   );
