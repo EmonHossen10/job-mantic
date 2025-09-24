@@ -141,12 +141,15 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex ">
         <ul className="menu menu-horizontal gap-3 px-1">{navOptions}</ul>
       </div>
-      <div className="navbar-end flex gap-2">
+
+      <div className="navbar-end flex gap-2 items-center">
         <Link href="/login">
-          <button className="font-semibold">Log In</button>
+          <button className="font-semibold text-xs sm:text-base py-1 px-2 sm:py-2 sm:px-4 rounded-md">
+            Log In
+          </button>
         </Link>
         <Link href="/signUp">
-          <button className="w-24 bg-black text-white p-2 rounded-full font-semibold">
+          <button className="bg-black text-white font-semibold text-xs sm:text-base py-1 px-3 sm:py-2 sm:px-4 rounded-full">
             Sign Up
           </button>
         </Link>
