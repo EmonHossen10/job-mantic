@@ -15,6 +15,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
+
+        <div>
+          {/* Navigation Bar */}
+        </div>
         {children}
       </body>
     </html>
