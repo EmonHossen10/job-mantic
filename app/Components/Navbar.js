@@ -138,11 +138,18 @@ const Navbar = () => {
           <Image src={logo} alt="Jobmantic Logo" />
         </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navOptions}</ul>
+      <div className="navbar-center hidden lg:flex ">
+        <ul className="menu menu-horizontal gap-3 px-1">{navOptions}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end flex gap-2">
+        <Link href="/login">
+          <button className="font-semibold">Log In</button>
+        </Link>
+        <Link href="/signUp">
+          <button className="w-24 bg-black text-white p-2 rounded-full font-semibold">
+            Sign Up
+          </button>
+        </Link>
       </div>
     </div>
   );
