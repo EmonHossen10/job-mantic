@@ -1,18 +1,19 @@
 import Image from "next/image";
 import React from "react";
 import logo from "@/public/topPick.png";
-import { IoIosArrowDropright } from "react-icons/io";
 import frame from "@/public/frame.png";
 import img1 from "@/public/summary1.png";
 import img2 from "@/public/summary2.png";
 import img3 from "@/public/summary3.png";
 import heroBg from "@/public/gradient.png";
+import Button from "./Button";
 
 const Hero = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-between items-center max-h-screen pb-10  "
-      style={{ backgroundImage: `url(${heroBg.src})`,    }}
+      <div
+        className="flex flex-col md:flex-row justify-between items-center max-h-screen pb-10  "
+        style={{ backgroundImage: `url(${heroBg.src})` }}
       >
         {/* left */}
         <div className="space-y-2 px-4 md:px-0">
@@ -34,13 +35,7 @@ const Hero = () => {
             </p>
           </div>
           <div>
-            <button className="flex items-center text-sm md:text-base gap-2 px-4 py-2 bg-black text-white rounded-full">
-              Improve your resume for FREE
-              <IoIosArrowDropright
-                className="bg-white text-black rounded-full "
-                size={24}
-              />
-            </button>
+            <Button>Improve your resume for FREE</Button>
           </div>
         </div>
 

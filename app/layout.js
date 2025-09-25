@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import Frame from "./Components/Frame";
 import WhyChoose from "./Components/WhyChoose";
+import SmartResume from "./Components/SmartResume";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
           <Hero></Hero>
           <Frame></Frame>
           <WhyChoose></WhyChoose>
+          <SmartResume></SmartResume>
         </div>
       </body>
     </html>
