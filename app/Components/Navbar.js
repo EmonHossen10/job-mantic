@@ -144,12 +144,17 @@ const Navbar = () => {
 
       <div className="navbar-end flex gap-2 items-center">
         <Link href="/login">
-          <button className="font-semibold text-xs sm:text-base py-1 px-2 sm:py-2 sm:px-4 rounded-md">
+          <button className="font-semibold text-xs sm:text-base py-1 px-2 sm:py-2 sm:px-4 rounded-md  cursor-pointer">
             Log In
           </button>
         </Link>
         <Link href="/signUp">
-          <button className="bg-black text-white font-semibold text-xs sm:text-base py-1 px-3 sm:py-2 sm:px-4 rounded-full">
+          <button
+            className="bg-black text-white font-semibold text-xs sm:text-base py-1 px-3 sm:py-2 sm:px-4 
+             rounded-full cursor-pointer 
+             transition-all duration-300 ease-in-out 
+             hover:opacity-90 hover:scale-105 active:scale-95"
+          >
             Sign Up
           </button>
         </Link>
