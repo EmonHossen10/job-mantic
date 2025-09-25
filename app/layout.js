@@ -6,6 +6,7 @@ import Frame from "./Components/Frame";
 import WhyChoose from "./Components/WhyChoose";
 import SmartResume from "./Components/SmartResume";
 import FastJob from "./Components/FastJob";
+import CareerMonitor from "./Components/CareerMonitor";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
           <WhyChoose></WhyChoose>
           <SmartResume></SmartResume>
           <FastJob></FastJob>
+          <CareerMonitor></CareerMonitor>
         </div>
       </body>
     </html>
