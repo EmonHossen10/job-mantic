@@ -24,33 +24,33 @@ const SmartResume = () => {
         <div className="w-full relative md:w-1/2 flex justify-center">
           <Image src={img} alt="Smart Resume" />
 
-          <p className="absolute text-sm font-semibold  ">Job Description</p>
-          <p className="absolute left-6 top-16 text-sm font-semibold  ">
+          <p className="absolute text-xs md:text-sm font-semibold  ">Job Description</p>
+          <p className="absolute  text-xs md:text-sm left-6 top-16  font-semibold  ">
             Resume
           </p>
           {/* dotted here */}
           <div className="flex absolute -right-4 flex-col items-end list-inside">
             <ul className="flex flex-col gap-2 ">
               <li className="flex justify-between items-center">
-                <span className="text-sm md:text-xs whitespace-nowrap">
+                <span className="text-xs whitespace-nowrap">
                   Customize Resume 
                 </span>
                 <span className="w-1 h-1 bg-[#80C0FF] rounded-full"></span>
               </li>
               <li className="flex justify-between items-center">
-                <span className="text-sm md:text-xs whitespace-nowrap">
+                <span className="text-xs whitespace-nowrap">
                   Experiences Match
                 </span>
                 <span className="w-1 h-1 bg-[#80C0FF] rounded-full"></span>
               </li>
               <li className="flex justify-between items-center">
-                <span className="text-sm md:text-xs whitespace-nowrap">
+                <span className="text-xs whitespace-nowrap">
                   Keyword Match
                 </span>
                 <span className="w-1 h-1 bg-[#80C0FF] rounded-full"></span>
               </li>
               <li className="flex justify-between items-center">
-                <span className="text-sm md:text-xs whitespace-nowrap">
+                <span className="text-xs whitespace-nowrap">
                   Relevant Skills
                 </span>
                 <span className="w-1 h-1 bg-[#80C0FF] rounded-full"></span>
