@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import Frame from "./Components/Frame";
+import WhyChoose from "./Components/WhyChoose";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
           {children}
           <Hero></Hero>
           <Frame></Frame>
+          <WhyChoose></WhyChoose>
         </div>
       </body>
     </html>
