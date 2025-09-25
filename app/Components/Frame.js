@@ -10,12 +10,12 @@ const Frame = () => {
       className="bg-cover bg-center"
       style={{ backgroundImage: `url(${bg.src})` }}
     >
-      <h2 className="text-2xl text-center py-10">
+      <h2 className="md:text-2xl text-xl text-center md:py-10  ">
         You are
-        <span className="font-bold text-[#23A2FC]"> 90% more likely</span> to
+        <span className="font-bold text-[#23A2FC] "> 90% more likely</span> to
         get hired if you use AI Apply
       </h2>
-      <section className="flex justify-center pb-5 gap-5">
+      <section className="flex  justify-center pb-5  md:gap-6 flex-wrap">
         <div className="p-5">
           <Image src={img1} alt="Frame 1" />
         </div>
