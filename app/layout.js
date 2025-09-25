@@ -9,6 +9,7 @@ import FastJob from "./Components/FastJob";
 import CareerMonitor from "./Components/CareerMonitor";
 import Preview from "./Components/Preview";
 import AiResumeBuilder from "./Components/AiResumeBuilder";
+import Revolutionary from "./Components/Revolutionary";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
           <CareerMonitor></CareerMonitor>
           <Preview></Preview>
           <AiResumeBuilder></AiResumeBuilder>
+          <Revolutionary></Revolutionary>
         </div>
       </body>
     </html>
