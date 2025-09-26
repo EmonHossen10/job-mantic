@@ -27,8 +27,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
-        <div className="max-w-5xl mx-auto px-4">
+      <body className={`${inter.variable} antialiased `}>
+        <div className="max-w-5xl mx-auto px-4  ">
           {/* Navigation Bar */}
           <Navbar />
           {children}

@@ -1,4 +1,6 @@
 import React from "react";
+import bgShadow from "@/public/bg-shadow.png";
+import Button from "./Button";
 
 const JobSeekers = () => {
   const data = [
@@ -29,20 +31,38 @@ const JobSeekers = () => {
   ];
   return (
     <div className="my-10 ">
-      <h2 className="text-4xl text-center font-semibold">
+      <h2 className="md:text-4xl text-xl text-center font-semibold">
         Why Job Seekers Choose Our
-        <span className="text-[#23A2FC]">AI Resume</span> Builder
+        <span className="text-[#23A2FC]"> AI Resume</span> Builder
       </h2>
 
-      <section>
+      <div className="grid grid-cols-1 md:grid-cols-4 mt-16 gap-6">
         {data.map((item, index) => (
-          <div key={index}>
-            <h2>{item.amount}</h2>
-            <h2>{item.title}</h2>
-            <p>{item.description}</p>
+         <div
+            key={item.id}
+            className={`p-4 rounded-2xl shadow-md text-black transition bg-cover bg-center`}
+            style={{
+              backgroundImage:
+                index === 0
+                  ? `url(${bgShadow.src})` // first card
+                  : index === data.length - 1
+                  ? `url(${bgShadow.src})` // last card
+                  : "none",
+              backgroundColor: index !== 0 && index !== data.length - 1 ? "#fff" : "transparent",
+            }}
+          >
+            <div>
+              <h2 className="text-center font-bold text-3xl mb-2">{item.amount}</h2>
+              <h2 className=" mb-2 font-bold">{item.title}</h2>
+              <p>{item.description}</p>
+            </div>
           </div>
         ))}
-      </section>
+      </div>
+
+      <div className="w-full mx-auto flex justify-center mt-10">
+  <Button>Build Your Resume Now</Button>
+</div>
     </div>
   );
 };
