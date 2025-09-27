@@ -1,5 +1,8 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
+
+import customer from "@/public/customer.png";
 
 const Pricing = () => {
   const [billing, setBilling] = useState("monthly");
@@ -16,7 +19,9 @@ const Pricing = () => {
           <button
             onClick={() => toggleBilling("monthly")}
             className={`px-4 py-1 rounded-full transition-colors ${
-              billing === "monthly" ? "bg-[#23A2FC] text-white" : "text-gray-700"
+              billing === "monthly"
+                ? "bg-[#23A2FC] text-white"
+                : "text-gray-700"
             }`}
           >
             Monthly
@@ -143,6 +148,20 @@ const Pricing = () => {
               <span className="text-[#23A2FC]">✔</span> 24/7 phone support
             </li>
           </ul>
+        </div>
+      </div>
+
+      {/* customers talk */}
+
+      <div className="mt-10">
+        <h2 className="text-center">
+          AIApply transformed my job search! ... I started <br />
+          getting 3x more interview invites within weeks.
+        </h2>
+
+        <div className="flex justify-center items-center gap-2 pt-5">
+          <Image src={customer} alt="customer"></Image>
+          <h2>Sophie C, Pro Customer</h2>
         </div>
       </div>
     </div>
