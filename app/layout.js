@@ -14,6 +14,7 @@ import SmartContent from "./Components/SmartContent";
 import ResumeBuilder from "./Components/ResumeBuilder";
 import JobSeekers from "./Components/JobSeekers";
 import JobPlacement from "./Components/JobPlacement";
+import Pricing from "./Components/Pricing";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
           <ResumeBuilder></ResumeBuilder>
           <JobSeekers></JobSeekers>
           <JobPlacement></JobPlacement>
+          <Pricing></Pricing>
         </div>
       </body>
     </html>
