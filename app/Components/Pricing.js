@@ -159,7 +159,7 @@ const Pricing = () => {
           getting 3x more interview invites within weeks.
         </h2>
 
-        <div className="flex justify-center items-center gap-2 pt-5">
+        <div className="flex justify-center items-center gap-3 pt-5">
           <Image src={customer} alt="customer"></Image>
           <h2>Sophie C, Pro Customer</h2>
         </div>
